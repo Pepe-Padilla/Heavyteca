@@ -1,14 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="heavyteca">
 <head lang="en">
     <meta charset="UTF-8" />
-    <title>IMDB Pobre</title>
-    <script src="vendor/angular.min.js" ></script>
-    <!-- script src="vendor/angular-route.min.js" ></script -->
-    <!-- script src="vendor/angular-route-segment.min.js" ></script -->
+    <title>HeavyTeca</title>
+    <link rel="stylesheet" href="styles/css/bootstrap.min.css">
+    <script src="vendor/angular.js"></script>
+    <!--script src="vendor/angular.min.js" ></script-->
+    <script src="vendor/angular-locale_es-es.js"></script>
+    <script src="vendor/angular-route.min.js" ></script>
+    <script src="vendor/angular-route-segment.min.js" ></script>
     <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/albumsCtrl.js"></script>
  </head>
  <body>
+    <div class="container">
+         <header>
+             <h1>Heavyteca</h1>
+             <h2>Heavy repo FTW!!!</h2>
+         </header>
+         <nav>
+             <ul class="nav nav-tabs">
+                 <li>
+                     <a href="#/albums">Álbumes</a>
+                 </li>
+                 <li>
+                     <a href="#/bands">Bandas</a>
+                 </li>
+                 <li>
+                     <a href="#/genders">Generos</a>
+                 </li>
+             </ul>
+         </nav>
+         <section app-view-segment="0"></section>
+        <!-- section ng-view></section-->
 
+     </div>
  </body>
  </html>
