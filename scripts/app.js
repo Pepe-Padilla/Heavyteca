@@ -9,7 +9,7 @@ angular
         $routeSegmentProvider.when( "/albums", "albums" );
         $routeSegmentProvider.when( "/bands", "bands" );
         $routeSegmentProvider.when( "/genres", "genres" );
-        //$routeSegmentProvider.when( "/peliculas/:id/detalles", "detalle_pelicula" )
+        //$routeSegmentProvider.when( "/almbums/:id/detalles", "albums.detalle" );
 
         $routeSegmentProvider.segment( "albums", {
             controller: "albumsCtrl",

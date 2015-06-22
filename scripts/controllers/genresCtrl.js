@@ -1,9 +1,9 @@
 
 angular
     .module("heavyteca")
-    .controller("genresCtrl", ["$scope", function( $scope ) {
+    .controller("genresCtrl", ["$scope", "genres", function( $scope, genres ) {
 
-        $scope.genre = "Soy un genero de muchos que hay";
+        $scope.genres = genres.data;
 
     }]);
 

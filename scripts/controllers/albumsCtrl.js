@@ -1,9 +1,9 @@
 
 angular
     .module("heavyteca")
-    .controller("albumsCtrl", ["$scope", function( $scope ) {
+    .controller("albumsCtrl", ["$scope", "albums", function( $scope, albums ) {
 
-        $scope.album = "Soy un album... Comprame!!!";
+        $scope.albums = albums.data;
 
     }]);
 

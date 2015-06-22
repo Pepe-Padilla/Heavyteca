@@ -1,4 +1,18 @@
-<div ng-controller="albumsCtrl">
-    <h1>Albums</h1>
-    <p>{{album}}</p>
-</div>
+<!--p> </p-->
+<table class="table table-striped">
+    <tbody>
+        <tr ng-repeat="album in albums | orderBy: ['band.name','year']">
+            <td><img ng-src="images/img/{{::album.image}}" width="120px" height="120px"></td>
+            <td>
+                <details>
+                    <summary>{{::album.title}} - ({{::album.year}})</summary>
+                    <h4>TrackList</h4>
+                    <hr>
+                    <span ng-repeat="tracktitle in album.tracklist">{{::tracktitle}}<br/></span>
+                </details>
+            </td>
+            <td>{{::album.band.name}}</td>
+            <td>{{::album.genre.name}}</td>
+        </tr>
+    </tbody>
+</table>

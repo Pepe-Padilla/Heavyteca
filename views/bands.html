@@ -1,4 +1,16 @@
-<div ng-controller="bandsCtrl">
-    <h1>Bandas</h1>
-    <p>{{band}}</p>
-</div>
+<table class="table table-striped">
+    <tbody>
+    <tr ng-repeat="band in bands | orderBy: ['name']">
+        <td>
+            <details>
+                <summary>{{::band.name}}</summary>
+                <h4>Albums</h4>
+                <hr>
+                <span ng-repeat="album in band.albums">{{::album.title}} - ({{album.year}})<br/></span>
+            </details>
+        </td>
+        <td>{{::band.origin}}</td>
+        <td><span ng-repeat="member in band.members">{{::member.name}} ( <span ng-repeat="instrument in member.instruments">{{instrument}} </span>)<br/></span></td>
+    </tr>
+    </tbody>
+</table>
