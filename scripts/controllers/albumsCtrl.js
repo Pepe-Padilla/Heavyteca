@@ -5,15 +5,6 @@ angular
 
         $scope.album = "Soy un album... Comprame!!!";
 
-        $scope.$watch(
-            function(){
-                return $scope.name;
-            },
-            function(valorNuevo, valorAntiguo){
-                //Do somthing
-            }
-        );
-
     }]);
 
 

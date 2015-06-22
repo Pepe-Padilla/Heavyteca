@@ -11,27 +11,30 @@
     <script src="vendor/angular-route-segment.min.js" ></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/albumsCtrl.js"></script>
+    <script src="scripts/controllers/bandsCtrls.js"></script>
+    <script src="scripts/controllers/gendersCtrl.js"></script>
+    <script src="scripts/controllers/navegationCtrl.js"></script>
  </head>
  <body>
     <div class="container">
          <header>
              <h1>Heavyteca</h1>
-             <h2>Heavy repo FTW!!!</h2>
+             <h3>Heavy repo FTW!!!</h3>
          </header>
-         <nav>
+         <nav ng-controller="navegationCtrl">
              <ul class="nav nav-tabs">
-                 <li>
+                 <li ng-class="{ 'active': routeNavIs('albums') }">
                      <a href="#/albums">Álbumes</a>
                  </li>
-                 <li>
+                 <li ng-class="{ 'active': routeNavIs('bands') }">
                      <a href="#/bands">Bandas</a>
                  </li>
-                 <li>
+                 <li ng-class="{ 'active': routeNavIs('genders') }">
                      <a href="#/genders">Generos</a>
                  </li>
              </ul>
          </nav>
-         <section app-view-segment="0"></section>
+        <section app-view-segment="0"></section>
         <!-- section ng-view></section-->
 
      </div>
