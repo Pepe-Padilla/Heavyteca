@@ -8,25 +8,39 @@ angular
 
         $routeSegmentProvider.when( "/albums", "albums" );
         $routeSegmentProvider.when( "/bands", "bands" );
-        $routeSegmentProvider.when( "/genders", "genders" );
+        $routeSegmentProvider.when( "/genres", "genres" );
         //$routeSegmentProvider.when( "/peliculas/:id/detalles", "detalle_pelicula" )
 
         $routeSegmentProvider.segment( "albums", {
             controller: "albumsCtrl",
-            templateUrl: "views/albums.html"
-            //resolve: {
-            //    Peliculas: ["ApiService", function(ApiService) {
-            //        return ApiService.obtenerDatos("movie/upcoming");
-            //    }]
-            //}
+            templateUrl: "views/albums.html",
+            resolve:  {
+                albums:
+                    ["albumsProvider", function(albumsProvider) {
+                        return albumsProvider.getAlbums();
+                    }]
+            }
+
         });
         $routeSegmentProvider.segment( "bands", {
             controller: "bandsCtrl",
-            templateUrl: "views/bands.html"
+            templateUrl: "views/bands.html",
+            resolve:  {
+                bands:
+                    ["bandsProvider", function(bandsProvider) {
+                        return bandsProvider.getBands();
+                    }]
+            }
         });
-        $routeSegmentProvider.segment( "genders", {
-            controller: "gendersCtrl",
-            templateUrl: "views/genders.html"
+        $routeSegmentProvider.segment( "genres", {
+            controller: "genresCtrl",
+            templateUrl: "views/genres.html",
+            resolve:  {
+                genres:
+                    ["genresProvider", function(genresProvider) {
+                        return genresProvider.getGenres();
+                    }]
+            }
         });
 
         /*$routeSegmentProvider.segment( "detalle_pelicula", {

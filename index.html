@@ -12,8 +12,11 @@
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/albumsCtrl.js"></script>
     <script src="scripts/controllers/bandsCtrls.js"></script>
-    <script src="scripts/controllers/gendersCtrl.js"></script>
+    <script src="scripts/controllers/genresCtrl.js"></script>
     <script src="scripts/controllers/navegationCtrl.js"></script>
+    <script src="scripts/services/albumsProvider.js"></script>
+    <script src="scripts/services/bandsProvider.js"></script>
+    <script src="scripts/services/genresProvider.js"></script>
  </head>
  <body>
     <div class="container">
@@ -29,8 +32,8 @@
                  <li ng-class="{ 'active': routeNavIs('bands') }">
                      <a href="#/bands">Bandas</a>
                  </li>
-                 <li ng-class="{ 'active': routeNavIs('genders') }">
-                     <a href="#/genders">Generos</a>
+                 <li ng-class="{ 'active': routeNavIs('genres') }">
+                     <a href="#/genres">Generos</a>
                  </li>
              </ul>
          </nav>
