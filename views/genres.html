@@ -1,4 +1,14 @@
-<div ng-controller="genresCtrl">
-    <h1>Genero</h1>
-    <p>{{genre}}</p>
-</div>
+<table class="table table-striped">
+    <tbody>
+    <tr ng-repeat="genre in genres | orderBy: ['name']">
+        <td>{{::genre.name}}</td>
+        <td>
+            <details>
+                <summary>Albums</summary>
+                <hr>
+                <span ng-repeat="album in genre.albums">{{::album.title}} - ({{::album.year}}) by {{::album.band.name}}<br/></span>
+            </details>
+        </td>
+    </tr>
+    </tbody>
+</table>

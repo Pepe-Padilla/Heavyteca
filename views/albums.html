@@ -2,7 +2,7 @@
 <table class="table table-striped">
     <tbody>
         <tr ng-repeat="album in albums | orderBy: ['band.name','year']">
-            <td><img ng-src="images/img/{{::album.image}}" width="120px" height="120px"></td>
+            <td><img ng-src="images/img/{{::album.image}}" width="120px" height="120px" class="img-rounded"></td>
             <td>
                 <details>
                     <summary>{{::album.title}} - ({{::album.year}})</summary>

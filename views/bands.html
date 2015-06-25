@@ -10,7 +10,8 @@
             </details>
         </td>
         <td>{{::band.origin}}</td>
-        <td><span ng-repeat="member in band.members">{{::member.name}} ( <span ng-repeat="instrument in member.instruments">{{instrument}} </span>)<br/></span></td>
+        <!--td><span ng-repeat="member in band.members">{{::member.name}} ( <span ng-repeat="instrument in member.instruments">{{::instrument}} </span>)<br/></span></td-->
+        <td><span ng-repeat="member in band.members">{{::member.name}} ({{::member.instruments | instruments}})<br/></span></td>
     </tr>
     </tbody>
 </table>
