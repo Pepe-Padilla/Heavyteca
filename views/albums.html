@@ -13,6 +13,7 @@
             </td>
             <td>{{::album.band.name}}</td>
             <td>{{::album.genre.name}}</td>
+            <td><button type="button" ng-class="{'btn btn-primary active' : dataFavorites[album.id]}" ng-click="toggleAlbumFavorite(album.id)">&#x2605</button></td>
         </tr>
     </tbody>
 </table>

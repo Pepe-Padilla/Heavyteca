@@ -9,6 +9,7 @@
                 <span ng-repeat="album in genre.albums">{{::album.title}} - ({{::album.year}}) by {{::album.band.name}}<br/></span>
             </details>
         </td>
+        <td><button type="button" ng-class="{'btn btn-primary active' : dataFavorites[genre.name]}" ng-click="toggleGenresFavorite(genre.name)">&#x2605</button></td>
     </tr>
     </tbody>
 </table>

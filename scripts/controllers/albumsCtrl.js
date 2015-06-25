@@ -5,14 +5,11 @@ angular
 
         $scope.albums = albums.data;
 
+        $scope.dataFavorites = favoriteManager.dataFavorites("albums","id",albums.data);
+
         $scope.toggleAlbumFavorite = function (id) {
-            return favoriteManager.toggleFavorite("albums",id);
+            $scope.dataFavorites[id] = favoriteManager.toggleFavorite("albums",id);
         };
-
-        $scope.albumIsFavorite = function (id) {
-            return favoriteManager.isFavorite("albums",id);
-        };
-
 
     }]);
 
