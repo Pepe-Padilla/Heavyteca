@@ -8,10 +8,12 @@ angular
 
         $scope.dataFavorites = favoriteManager.dataFavorites(literales.bandsFavorite,literales.bandsFavoriteID,bands.data);
 
+        /* //se pasa a directiva bandDirective.js
         $scope.toggleBandsFavorite = function (id) {
             //debugger;
             $scope.dataFavorites[id] = favoriteManager.toggleFavorite(literales.bandsFavorite,id);
         };
+        */
 
     }]);
 

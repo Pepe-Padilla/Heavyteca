@@ -42,9 +42,17 @@ angular
         this.dataFavorites = function (section, idAtribute, arrData) {
             //debugger;
             var data = [];
-            for(i=0;i<arrData.length;i++) {
-                var id = arrData[i][idAtribute];
-                data[id] = this.isFavorite(section,id);
+            if(typeof(Storage) !== "undefined") {
+
+                var data = JSON.parse(localStorage.getItem(section));
+
+                for(i=0;i<arrData.length;i++) {
+                    var id = arrData[i][idAtribute];
+                    id = id + "";
+
+                    if(data == null) data[id] =  false;
+                    else data[id] =  data[id] == "true";
+                }
             }
 
             return data;

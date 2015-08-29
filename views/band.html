@@ -1,11 +1,14 @@
 <tr>
-    <td>{{band.name}}</td>
-    <td>{{band.origin}}</td>
     <td>
-        <ul>
-            <li ng-­‐repeat="member in band.member">
-                {{member.name}}
-            </li>
-        </ul>
+        <details>
+            <summary>{{::dato.name}}</summary>
+            <h4>Albums</h4>
+            <hr>
+            <span ng-repeat="album in dato.albums">{{::dato.title}} - ({{album.year}})<br/></span>
+        </details>
     </td>
+    <td>{{::band.origin}}</td>
+
+    <td><span ng-repeat="member in dato.members">{{::member.name}} ({{::member.instruments | instruments}})<br/></span></td>
+    <td><button type="button" ng-class="{'btn btn-primary active' : favorite[dato.name] }" ng-click="toggleBandFavorite(dato.name)">&#x2605</button></td>
 </tr>

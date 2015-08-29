@@ -1,7 +1,18 @@
 angular
     .module("heavyteca")
-    .directive("band",function(){
+    .directive("bandItem", ["favoriteManager", "literales", function(favoriteManager, literales){
         return {
-            templateUrl: "band.html"
+            retrict: "AE",
+            templateUrl: "views/band.html",
+            scope: {
+                dato: "=",
+                favorite: "="
+                //ngClick: "&"
+            },
+            link: function(scope) {
+                scope.toggleBandFavorite = function (id) {
+                    scope.favorite[id] = favoriteManager.toggleFavorite(literales.bandsFavorite,id);
+                };
+            }
         }
-    });
+    }]);
