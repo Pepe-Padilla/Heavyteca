@@ -1,6 +1,9 @@
 <table class="table table-striped">
     <tbody>
-    <tr ng-repeat="genre in genres | orderBy: ['name']">
+    <tr ng-repeat="genre in genres | orderBy: ['name']" genre-item
+        dato="genre"
+        favorite="dataFavorites">
+        <!--
         <td>{{::genre.name}}</td>
         <td>
             <details>
@@ -10,6 +13,7 @@
             </details>
         </td>
         <td><button type="button" ng-class="{'btn btn-primary active' : dataFavorites[genre.name]}" ng-click="toggleGenresFavorite(genre.name)">&#x2605</button></td>
+        -->
     </tr>
     </tbody>
 </table>

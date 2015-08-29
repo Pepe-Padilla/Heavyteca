@@ -1,0 +1,11 @@
+<tr>
+    <td>{{::dato.name}}</td>
+    <td>
+        <details>
+            <summary>Albums</summary>
+            <hr>
+            <span ng-repeat="album in dato.albums">{{::album.title}} - ({{::album.year}}) by {{::album.band.name}}<br/></span>
+        </details>
+    </td>
+    <td><button type="button" ng-class="{'btn btn-primary active' : favorite[dato.name]}" ng-click="toggleGenresFavorite(dato.name)">&#x2605</button></td>
+</tr>

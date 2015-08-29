@@ -1,7 +1,10 @@
 <!--p> </p-->
 <table class="table table-striped">
     <tbody>
-        <tr ng-repeat="album in albums | orderBy: ['band.name','year']">
+        <tr ng-repeat="album in albums | orderBy: ['band.name','year']" album-item
+            dato="album"
+            favorite="dataFavorites">
+            <!--
             <td><img ng-src="images/img/{{::album.image}}" width="120px" height="120px" class="img-rounded"></td>
             <td>
                 <details>
@@ -14,6 +17,7 @@
             <td>{{::album.band.name}}</td>
             <td>{{::album.genre.name}}</td>
             <td><button type="button" ng-class="{'btn btn-primary active' : dataFavorites[album.id]}" ng-click="toggleAlbumFavorite(album.id)">&#x2605</button></td>
+            -->
         </tr>
     </tbody>
 </table>

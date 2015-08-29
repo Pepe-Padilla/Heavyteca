@@ -8,9 +8,9 @@ angular
 
         $scope.dataFavorites = favoriteManager.dataFavorites(literales.albumsFavorite, literales.albumsFavoriteID, albums.data);
 
-        $scope.toggleAlbumFavorite = function (id) {
-            $scope.dataFavorites[id] = favoriteManager.toggleFavorite(literales.albumsFavorite,id);
-        };
+        //$scope.toggleAlbumFavorite = function (id) {
+        //    $scope.dataFavorites[id] = favoriteManager.toggleFavorite(literales.albumsFavorite,id);
+        //};
 
     }]);
 

@@ -8,10 +8,10 @@ angular
 
         $scope.dataFavorites = favoriteManager.dataFavorites(literales.genresFavorite,literales.genresFavoriteID,genres.data);
 
-        $scope.toggleGenresFavorite = function (id) {
+        //$scope.toggleGenresFavorite = function (id) {
             //debugger;
-            $scope.dataFavorites[id] = favoriteManager.toggleFavorite(literales.genresFavorite,id);
-        };
+        //    $scope.dataFavorites[id] = favoriteManager.toggleFavorite(literales.genresFavorite,id);
+        //};
 
     }]);
 

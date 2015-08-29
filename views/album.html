@@ -1,0 +1,14 @@
+<tr>
+    <td><img ng-src="images/img/{{::dato.image}}" width="120px" height="120px" class="img-rounded"></td>
+    <td>
+        <details>
+            <summary>{{::dato.title}} - ({{::dato.year}})</summary>
+            <h4>TrackList</h4>
+            <hr>
+            <span ng-repeat="tracktitle in dato.tracklist">{{::tracktitle}}<br/></span>
+        </details>
+    </td>
+    <td>{{::dato.band.name}}</td>
+    <td>{{::dato.genre.name}}</td>
+    <td><button type="button" ng-class="{'btn btn-primary active' : favorite[dato.id]}" ng-click="toggleAlbumFavorite(dato.id)">&#x2605</button></td>
+</tr>
