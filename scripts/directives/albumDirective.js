@@ -2,7 +2,7 @@ angular
     .module("heavyteca")
     .directive("albumItem", ["favoriteManager", "literales", function(favoriteManager, literales){
         return {
-            retrict: "AE",
+            restrict: "AE",
             templateUrl: "views/album.html",
             scope: {
                 dato: "=",

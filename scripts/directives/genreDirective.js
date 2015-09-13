@@ -2,7 +2,7 @@ angular
     .module("heavyteca")
     .directive("genreItem", ["favoriteManager", "literales", function(favoriteManager, literales){
         return {
-            retrict: "AE",
+            restrict: "AE",
             templateUrl: "views/genre.html",
             scope: {
                 dato: "=",

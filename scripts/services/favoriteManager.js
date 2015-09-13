@@ -46,12 +46,14 @@ angular
 
                 var data = JSON.parse(localStorage.getItem(section));
 
+                if(data == null) return [];
+
                 for(i=0;i<arrData.length;i++) {
                     var id = arrData[i][idAtribute];
+
                     id = id + "";
 
-                    if(data == null) data[id] =  false;
-                    else data[id] =  data[id] == "true";
+                    data[id] =  data[id] == "true";
                 }
             }
 
